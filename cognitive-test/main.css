@@ -1,0 +1,119 @@
+#outer-dropzone { height: 140px; }
+#inner-dropzone { height: 80px; }
+
+.drag-over {
+  z-index: -1;
+}
+.car {
+  /*border: dashed 4px transparent;*/
+  border-radius: 4px;
+  margin: 10px auto 30px;
+  padding: 10px;
+  height: 370px;
+  width: 300px;
+  border: solid 2px #fff;
+  background-size: contain;
+  background-image: url(images/car.png);
+  background-repeat:no-repeat;
+}
+
+.dropzone {
+  background-color: #ccc;
+  border: dashed 4px transparent;
+  border-radius: 4px;
+  margin: 10px auto 30px;
+  padding: 10px;
+  width: 80%;
+  transition: background-color 0.3s;
+}
+
+.drop-active { border-color: #a00; }
+.drop-target { background-color: #29e; border-color: #fff; border-style: solid; }
+
+.inline { display: inline-block; }
+.drag-drop {
+  z-index: 2;
+  display: inline-block;
+  min-width: 50px;
+  padding: 2em 0.5em;
+
+  color: #fff;
+  background-color: #29e;
+  border: solid 2px #fff;
+
+  touch-action: none;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+
+  transition: background-color 0.3s;
+}
+
+.highlight { border-color: #4e4; }
+
+.me { background-color: #ccc; }
+.friend { background-color: #cf7f3a; }
+.stranger { background-color: #2d753c; }
+
+.me-border { border: solid 2px #ccc; }
+.friend-border { border: solid 2px #cf7f3a; }
+.stranger-border { border: solid 2px #2d753c; }
+
+.badge-warning { background-color: #cf7f3a; }
+.badge-success { background-color: #2d753c; }
+.badge-secondary { background-color: #ccc; }
+
+.trolley {
+  border-radius: 4px;
+  margin: 10px auto 30px;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.no-drag {
+  display: inline-block;
+  padding: 10px;
+  min-width: 80px;
+  /*height: 80px;
+  padding: 2em 0.5em;*/
+
+  color: #fff;
+  border: solid 2px #fff;
+
+  /*touch-action: none;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+
+  transition: background-color 0.3s;*/
+}
+
+.drag-drop.can-drop { color: #000; background-color: #4e4; }
+
+.modal-title { width: 100% }
+
+.jumbotron { padding: 15px; margin-bottom: 0px; }
+.hr { margin: 0px; }
+.my-4 { margin: 0px; }
+
+.hide { display: none; }
+.show { display: inline-block; }
+
+.thumb {
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 60px; /* Set a small width */
+}
+.thumb-large {  width: 100px; }
+.thumb-xxlarge { width: 450px; }
+
+/* Add a hover effect (blue shadow) */
+.thumb:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.fluid { display: inline-block; }
+.flex { display: inline-flex; }
+.space-out { padding: 5px; }
+
+.modal-footer { justify-content: center; }
+.close {display: none;}

@@ -3785,12 +3785,13 @@ aside .latest-post li figure {width: 75px;}
     background:rgba(100,100,100,0.7);
   }
 
-.jab { width: 65%;
-    /*display: inline-block;
-    border-radius: 5px;
+.jab {/*width: 60%;
+    display: inline-block;
     border: 2px solid #999;*/
+    border-radius: 10px;
     padding: 20px;
-    background:rgba(0,0,0,0.8);
+    background:rgba(0,0,0,0.5);
+    text-align: center;
 }
 
 .left { text-align: left; }

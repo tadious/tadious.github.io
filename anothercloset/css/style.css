@@ -48,7 +48,7 @@ Table of contents
 body{ font-family: 'Roboto', sans-serif; -webkit-font-smoothing: antialiased;  font-smoothing: antialiased; font-size:14px; color:#6f6f6f; font-weight: 400;line-height: 24px;}
 body, html { height: 100%; -moz-osx-font-smoothing: grayscale;}
 a, a:active, a:focus { color: #6f6f6f; text-decoration: none; }
-a:hover, a:active{color: #ff214f; text-decoration: none;}
+a:hover, a:active{color: #87e8cf; text-decoration: none;}
 a:focus, a:active, button:focus, button:active,.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {outline: none;}
 img {max-width:100%; height:auto; }
 video { background-size: cover; display: table-cell; vertical-align: middle; width: 100%; }
@@ -125,23 +125,23 @@ blockquote  p {font-size: 18px; line-height: 30px; margin-bottom: 17px !importan
 blockquote {border-left: 2px solid; padding: 15px 40px; margin: 45px 0}
 blockquote footer {color: #939393;}
 .blog-image blockquote {padding: 60px; border: 0; margin: 0;}
-.blog-image blockquote h6:before {content:"\e67f"; font-family:'themify'; font-size: 40px; top:5px; position: relative; margin-right: 12px; color: #ff214f}
+.blog-image blockquote h6:before {content:"\e67f"; font-family:'themify'; font-size: 40px; top:5px; position: relative; margin-right: 12px; color: #87e8cf}
 
 /* text link hover color */
 a.text-link-white, a.text-link-white i {color:#ffffff}
-a.text-link-white:hover, a.text-link-white:hover i, a.text-link-white:focus, a.text-link-white:focus i {color:#ff214f}
+a.text-link-white:hover, a.text-link-white:hover i, a.text-link-white:focus, a.text-link-white:focus i {color:#87e8cf}
 a.text-link-black, a.text-link-black i {color:#000000}
 a.text-link-dark-gray {color:#939393}
 a.text-link-dark-gray:hover, .text-link-dark-gray:focus {color:#232323}
 a.text-link-extra-dark-gray {color:#232323}
 a.text-link-extra-dark-gray:hover, a.text-link-extra-dark-gray:focus {color:#000000}
-a.text-link-deep-pink, a.text-link-deep-pink i {color:#ff214f}
+a.text-link-deep-pink, a.text-link-deep-pink i {color:#87e8cf}
 a.text-link-deep-pink:hover, a.text-link-deep-pink:hover i, a.text-link-deep-pink:focus, a.text-link-deep-pink:focus i {color:#fff}
 
 /* hover color */
 a.text-white-hover:hover, a.text-white-hover:focus {color:#fff}
 a.text-black-hover:hover, a.text-black-hover:focus {color:#000}
-a.text-deep-pink-hover:hover, a.text-deep-pink-hover:focus {color:#ff214f}
+a.text-deep-pink-hover:hover, a.text-deep-pink-hover:focus {color:#87e8cf}
 a.text-deep-green-hover:hover, a.text-deep-green-hover:focus {color:#87e8cf}
 a.text-extra-dark-gray-hover:hover {color:#232323}
 a.text-dark-gray-hover:hover {color:#626262}
@@ -207,9 +207,9 @@ a.text-very-light-gray-hover:hover {color:#ededed}
 .text-outside-line-full::after {content: ""; position: absolute; top: 50%; height: 1px; width: 99%; display: block; border-bottom:1px solid; left: 100%; margin-left: 25px; opacity: .15 }
 .text-middle-line:before {border-bottom: 1px solid; position: absolute; content: ""; width: 100%; top: 53%; opacity: 0.35}
 .text-bottom-line {width: 1px; border-top: 30px solid; margin-left: auto; margin-right: auto;}
-.text-middle-line-deep-pink:before {border-bottom: 1px solid #ff214f; position: absolute; content: ""; width: 100%; margin-top: 5px; margin-left: -20px; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%);}
+.text-middle-line-deep-pink:before {border-bottom: 1px solid #87e8cf; position: absolute; content: ""; width: 100%; margin-top: 5px; margin-left: -20px; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%);}
 .text-decoration-line-through-black,.text-decoration-line-through-deep-pink {position: relative;}
-.text-decoration-line-through-deep-pink:before {background: #ff214f;}
+.text-decoration-line-through-deep-pink:before {background: #87e8cf;}
 .text-decoration-line-through-black:before {background: #000;}
 .text-decoration-line-through-black::before,.text-decoration-line-through-deep-pink:before {content: ""; height: 1px; left: -10px; position: absolute; top: 53%; width: calc(100% + 20px);-webkit-transform: translateY(-53%); -moz-transform: translateY(-53%); -ms-transform: translateY(-53%); -o-transform: translateY(-53%); transform: translateY(-53%);}
 
@@ -538,7 +538,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 .overline-icon-box.overline-extra-light-gray{border-top-color: #dbdbdb;}
 .overline-icon-box.overline-medium-gray{border-top-color: #e4e4e4;}
 .overline-icon-box.overline-light-gray{border-top-color: #f5f5f5;}
-.overline-icon-box.overline-light-pink{border-top-color: #862237;}
+.overline-icon-box.overline-light-pink{border-top-color: #87e8cf;}
 .overline-icon-box.overline-deep-pink{border-top-color: #87e8cf;}
 .overline-icon-box.overline-transparent-pink{border-top-color: rgba(135, 232, 207, 0.45);}
 

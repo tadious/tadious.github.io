@@ -1352,8 +1352,28 @@ $(document).ready(function () {
 
     $('#contact-us-button').on("click", function () {
         var error = ValidationContactForm();
+        console.log($('#name').val());
+            console.log($('#email').val());
+            console.log($('#subject').val());
+            console.log($('#comment').val());
         if (error) {
-            $.ajax({
+            Email.send({
+                Host : "mail.svenskadomaner.se",
+                Username : "contact@another-closet.com",
+                Password : "_x%L!WOS+t)B",
+                To : ['tadious@gmail.com', 'contact@another-closet.com'],
+                From : 'contact@another-closet.com',
+                Subject : $('#subject').val(),
+                Body : `<html>Message from ${$('#name').val()}, ${$('#email').val()} <br>${$('#comment').val()}</html>`
+            }).then((result) => {
+                $('input[type=text],textarea').each(function () {
+                    $(this).val('');
+                })
+                $("#success-contact-form").html('Message sent, we will get back to you shortly.');
+                $("#success-contact-form").fadeIn("slow");
+                $('#success-contact-form').delay(4000).fadeOut("slow");
+            });
+            /*$.ajax({
                 type: "POST",
                 url: "email-templates/contact.php",
                 data: $("#contact-form").serialize(),
@@ -1368,7 +1388,7 @@ $(document).ready(function () {
                     $("#success-contact-form").fadeIn("slow");
                     $('#success-contact-form').delay(4000).fadeOut("slow");
                 }
-            });
+            });*/
         }
     });
     function ValidationContactForm() {

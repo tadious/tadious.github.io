@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+
+    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+    <title>Emotion Induction test!!!</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h1>Emotion Induction Testing</h1>
+      <video id="emotion_video" class="video-js vjs-default-skin vjs-big-play-centered"
+        controls preload="auto" poster="images/poster.jpg">
+        <source src="./video.mp4" type="video/mp4" />
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+      </video>
+
+      <div id="moti-meter" style="padding: 15px;display: none;">
+        <div style="padding: 15px;">Which selection best describes how you are feeling at the moment?</div>
+        <a href="#" onclick="return registerEmotion(5);">
+          <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-emoji-laughing text-success" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path fill-rule="evenodd" d="M12.331 9.5a1 1 0 0 1 0 1A4.998 4.998 0 0 1 8 13a4.998 4.998 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5z"/>
+            <path d="M7 6.5c0 .828-.448 0-1 0s-1 .828-1 0S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 0-1 0s-1 .828-1 0S9.448 5 10 5s1 .672 1 1.5z"/>
+          </svg>
+        </a>
+
+        <a href="#" onclick="return registerEmotion(4);">
+          <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-emoji-smile text-info" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path fill-rule="evenodd" d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683z"/>
+            <path d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+          </svg>
+        </a>
+
+        <a href="#" onclick="return registerEmotion(3);">
+          <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-emoji-expressionless text-secondary" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path fill-rule="evenodd" d="M4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm5 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </a>
+
+        <a href="#" onclick="return registerEmotion(2);">
+          <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-emoji-frown text-warning" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path fill-rule="evenodd" d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683z"/>
+            <path d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+          </svg>
+        </a>
+
+        <a href="#" onclick="return registerEmotion(2);">
+          <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-emoji-angry text-danger" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path fill-rule="evenodd" d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683z"/>
+            <path d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+            <path fill-rule="evenodd" d="M4.053 4.276a.5.5 0 0 1 .67-.223l2 1a.5.5 0 1 1-.447.894l-2-1a.5.5 0 0 1-.223-.67zm7.894 0a.5.5 0 0 0-.67-.223l-2 1a.5.5 0 1 0 .447.894l2-1a.5.5 0 0 0 .223-.67z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script>
+      const emotionRegister = [];
+      const numberOfDataPoints = 5;
+      let pauseAt = 0;
+      const timePauses = [];
+      let modal;
+      const player = videojs('emotion_video');
+      player.ready(function(){
+        const modalElement = document.createElement('div');
+        modalElement.innerHTML = $('#moti-meter').html();
+
+        var ModalDialog = videojs.getComponent('ModalDialog');
+        modal = new ModalDialog(player, {
+          content: modalElement,
+          temporary: false
+        });
+
+        // When the modal closes, resume playback.
+        modal.on('modalclose', function() {
+          if (player.currentTime() === player.duration()) {
+            alert('>>>>>>>>>>>video play complete');
+          } else {
+            player.play();
+          }
+        });
+  
+        player.addChild(modal);
+        modal.open();
+      });
+
+      player.on('pause', function() {
+        modal.open();
+      });
+
+      player.on('timeupdate', function(e) {
+        if (player.currentTime() >= pauseAt) {
+          pauseAt = timePauses.shift();
+          player.pause();
+          console.log({ timePauses });
+        }
+
+        if (player.currentTime() === player.duration()) {
+          alert('>>>>>>>>>>>video play complete');
+        }
+      });
+
+      player.on('loadedmetadata', function(e) {
+        const duration = player.duration();
+        const interval = duration/numberOfDataPoints;
+        for (i = 1; i <= numberOfDataPoints; i++) {
+          timePauses.push(Math.floor(i*interval));
+        }
+        pauseAt = timePauses[0];
+      });
+
+    const registerEmotion = (emotion) => {
+      const currentTime = player.currentTime();
+      console.log('>>>>>>>>>>>>>>>log emotion registration', { emotion, pauseAt, currentTime });
+
+      modal.close();
+      return false;
+    };
+    </script>
+
+  </body>
+</html>

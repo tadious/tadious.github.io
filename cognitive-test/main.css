@@ -117,3 +117,6 @@
 
 .modal-footer { justify-content: center; }
 .close {display: none;}
+
+.video-js { display: inline-block !important; }
+.vjs-close-button { display: none !important; }
